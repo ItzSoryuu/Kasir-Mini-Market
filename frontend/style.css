@@ -1,0 +1,244 @@
+/* Token Variabel Desain */
+:root {
+    --bg-global: #f2f2f7;
+    --bg-card: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #8e8e93;
+    --accent-color: #037aff;
+    --border-radius: 26px;
+    --item-padding: 16px 20px;
+    --border-color: #e5e5ea;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-global);
+    color: var(--text-primary);
+    padding-bottom: 40px;
+}
+
+/* Komponen OUI (One UI) */
+
+.oui-header {
+    padding: 60px 24px 20px 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header-content .subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.header-content .title {
+    font-size: 34px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.oui-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.oui-card {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.oui-btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 16px;
+    width: 100%;
+    border-radius: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.oui-btn-primary:disabled {
+    background-color: var(--border-color);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+}
+
+.oui-btn-action {
+    background-color: var(--bg-global);
+    color: var(--text-primary);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.oui-btn-icon {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oui-btn-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-primary);
+}
+
+.oui-input-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.oui-input-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding-left: 4px;
+}
+
+.oui-input {
+    padding: 16px;
+    border-radius: 14px;
+    background-color: var(--bg-global);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+}
+
+.oui-input:focus {
+    border-color: var(--accent-color);
+}
+
+.oui-select {
+    padding: 14px;
+    border-radius: 14px;
+    background-color: var(--bg-global);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    font-size: 15px;
+    outline: none;
+}
+
+.oui-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: var(--bg-global);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+}
+
+/* Komponen List & Row */
+
+.list-container {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--bg-global);
+}
+
+.list-container.empty {
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--text-secondary);
+    background-color: transparent;
+    border: 2px dashed var(--border-color);
+}
+
+.item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--item-padding);
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.item-row:last-child {
+    border-bottom: none;
+}
+
+.item-info .item-name {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.item-info .item-price {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+/* Summary Section */
+.checkout-section {
+    margin-top: 24px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 12px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 4px;
+    font-size: 15px;
+}
+
+.summary-line.total-pay {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent-color);
+    border-top: 1px solid var(--border-color);
+    margin-top: 8px;
+    padding-top: 12px;
+}
+
+/* Teks Error */
+.error-text {
+    color: #ff3b30;
+    font-size: 13px;
+    margin-top: 10px;
+    font-weight: 500;
+    padding-left: 4px;
+}

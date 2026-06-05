@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Market Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-screen" class="oui-login-container">
+        <div class="oui-card login-card">
+            <span class="subtitle">Sistem Kasir</span>
+            <h1 class="title" style="margin-bottom: 24px;">Login Admin</h1>
+            
+            <div class="oui-input-group">
+                <label for="input-username">Username</label>
+                <input type="text" id="input-username" class="oui-input" placeholder="Masukkan username">
+            </div>
+            
+            <div class="oui-input-group" style="margin-top: 14px;">
+                <label for="input-password">Password</label>
+                <input type="password" id="input-password" class="oui-input" placeholder="Masukkan password">
+            </div>
+            
+            <p id="login-error" class="error-text" style="display: none;">Username atau Password salah!</p>
+            
+            <button id="btn-login" class="oui-btn-primary">Masuk</button>
+        </div>
+    </div>
+
+    <div id="main-screen" style="display: none;">
+        <header class="oui-header">
+            <div class="header-content">
+                <span class="subtitle">Sistem Kasir</span>
+                <h1 class="title">Mini Market</h1>
+            </div>
+            <div>
+                <button id="btn-logout" class="oui-btn-action" style="color: red; background: var(--bg-card); border: 1px solid var(--border-color);">Keluar</button>
+            </div>
+        </header>
+
+        <main class="oui-container">
+            <section class="oui-card">
+                <h2 class="card-title">Daftar Barang</h2>
+                <div id="product-list" class="list-container"></div>
+            </section>
+
+            <section class="oui-card">
+                <h2 class="card-title">Keranjang Belanja</h2>
+                <div id="cart-list" class="list-container empty">
+                    Belum ada barang di keranjang.
+                </div>
+
+                <div class="checkout-section">
+                    <div class="oui-input-group">
+                        <label for="member-status">Status Anggota</label>
+                        <select id="member-status" class="oui-select">
+                            <option value="tidak">Bukan Member</option>
+                            <option value="ya">Member Resmi</option>
+                        </select>
+                    </div>
+
+                    <div class="summary-line">
+                        <span>Total Belanja:</span>
+                        <span id="text-total">Rp0</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Potongan Diskon:</span>
+                        <span id="text-diskon">Rp0</span>
+                    </div>
+                    <div class="summary-line total-pay">
+                        <span>Total Bayar:</span>
+                        <span id="text-bayar">Rp0</span>
+                    </div>
+
+                    <button id="btn-checkout" class="oui-btn-primary" disabled>Proses Transaksi</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
